@@ -1,6 +1,3 @@
-/* SVG Türkiye Haritası | CSS | MIT Lisans | dnomak.com */
-
-/* Tooltip */
 .tooltip {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
@@ -13,7 +10,6 @@
   pointer-events: none;
 }
 
-/* Türkiye Haritası */
 .svg-turkiye-haritasi {
   width: 100vw;
   height: 80vh;
@@ -21,18 +17,19 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: 100px; /* Menü çakışmasını önlemek için */
+  margin-top: 100px;
 }
+
 .svg-turkiye-haritasi svg {
   width: 100%;
   height: 100%;
 }
 
-/* İl İsimleri */
 .il-isimleri {
   position: absolute;
   z-index: 2;
 }
+
 .il-isimleri div {
   font-family: 'Open Sans';
   display: inline-block;
@@ -42,22 +39,23 @@
   border-radius: 4px;
 }
 
-/* Harita Yolları */
 #svg-turkiye-haritasi path {
   cursor: pointer;
   fill: #222;
 }
+
 #svg-turkiye-haritasi path:hover {
   fill: #1094F6;
 }
+
 #svg-turkiye-haritasi path.selected {
-  fill: #28a745 !important; /* Seçili il için vurgulu renk */
+  fill: #28a745 !important;
 }
+
 #guney-kibris {
   pointer-events: none;
 }
 
-/* Başlık */
 .header-title {
   position: absolute;
   top: 10px;
@@ -67,7 +65,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Navbar */
 .navbar {
   width: 100%;
   padding: 20px 20px;
@@ -85,12 +82,12 @@
   box-shadow: none;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .navbar.scrolled {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   background-color: white;
 }
 
-/* Logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
@@ -98,7 +95,6 @@
   height: auto;
 }
 
-/* Navbar Linkleri */
 .nav-links {
   list-style: none;
   display: flex;
@@ -106,17 +102,18 @@
   margin: 0;
   padding: 0;
 }
+
 .nav-links li a {
   color: black;
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s ease;
 }
+
 .nav-links li a:hover {
   color: #1094F6;
 }
 
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -128,6 +125,7 @@
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
+
 .modal-content {
   background-color: #fefefe;
   margin: 10% auto;
@@ -140,6 +138,7 @@
   overflow-y: auto;
   max-height: 80vh;
 }
+
 .close {
   color: #aaa;
   float: right;
@@ -147,11 +146,12 @@
   font-weight: bold;
   cursor: pointer;
 }
-.close:hover, .close:focus {
+
+.close:hover,
+.close:focus {
   color: black;
 }
 
-/* Şehir Yemekleri */
 #cityFoods {
   display: flex;
   flex-wrap: wrap;
@@ -159,22 +159,24 @@
   justify-content: center;
   margin-top: 20px;
 }
+
 #cityFoods .food-item {
   text-align: center;
   width: 150px;
 }
+
 #cityFoods .food-item img {
   width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 #cityFoods .food-item h4 {
   margin-top: 10px;
   font-size: 16px;
 }
 
-/* Footer */
 .footer {
   margin-top: 100px;
   color: black;
@@ -182,44 +184,99 @@
   text-align: center;
 }
 
-/* Medya Sorguları */
 @media (max-width: 768px) {
   .modal-content {
     margin-top: 60%;
     width: 90%;
     max-height: 90vh;
   }
+
   #cityFoods .food-item {
     width: 100px;
   }
- 
-  
+
+
   .navbar {
-    flex-direction: column; /* Dikey hizalama */
-    align-items: center; /* Ortala */
-    padding: 10px 0; /* Daha az boşluk */
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
   }
+
   .navbar.scrolled {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     background-color: white;
   }
-  
+
   .logo {
-    font-size: 10px; /* Küçültme */
-    margin-bottom: 10px; /* Logo ile menü arasına boşluk ekle */
- 
+    font-size: 10px;
+    margin-bottom: 10px;
+
   }
-  
+
   .nav-links li {
-    display: inline-block; /* Elemanları aynı satıra yerleştir */
+    display: inline-block;
   }
+
   .nav-links li a {
     font-size: 0.9em;
-    
+
   }
+
   .nav-links {
-    display: flex; /* Yan yana dizilsin */
-    gap: 10px; /* Daha dar boşluk */
+    display: flex;
+    gap: 10px;
     font-size: 10px;
   }
+
+  .auth-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-left: auto;
   }
+
+  .btn-auth {
+    background-color: #1094F6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn-auth:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  .btn-auth:active {
+    transform: translateY(1px);
+  }
+
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .btn-auth {
+    background-color: #1094F6;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .btn-auth:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+  }
+}
